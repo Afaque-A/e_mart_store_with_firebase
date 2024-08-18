@@ -1,4 +1,3 @@
-
-const regular = "sans_regular";
-const semibold = "sans_semibold";
-const bold = "sans_bold";
+const regular = "OpenSans-Regular";
+const semibold = "OpenSans-Medium";
+const light = "OpenSans-Light";
