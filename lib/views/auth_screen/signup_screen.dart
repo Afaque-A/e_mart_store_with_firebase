@@ -1,8 +1,6 @@
 import 'package:e_mart_store_with_firebase/const/constant.dart';
-import 'package:e_mart_store_with_firebase/const/list_of_icons.dart';
 import 'package:e_mart_store_with_firebase/strings.dart';
 import 'package:e_mart_store_with_firebase/style.dart';
-import 'package:e_mart_store_with_firebase/views/auth_screen/login_screen.dart';
 import 'package:e_mart_store_with_firebase/widgets_common/applogo_widget.dart';
 import 'package:e_mart_store_with_firebase/widgets_common/bg_widget.dart';
 import 'package:e_mart_store_with_firebase/widgets_common/custom_textfield.dart';
@@ -53,7 +51,7 @@ class SignupScreen extends StatelessWidget {
                         10.widthBox,
                         Expanded(
                           child: RichText(
-                              text: TextSpan(children: [
+                              text: const TextSpan(children: [
                             TextSpan(
                                 text: "I agree to the ",
                                 style: TextStyle(
@@ -85,7 +83,7 @@ class SignupScreen extends StatelessWidget {
                         .make(),
                     5.heightBox,
                     RichText(
-                        text: TextSpan(children: [
+                        text: const TextSpan(children: [
                       TextSpan(
                           text: alreadyHaveAccount,
                           style:

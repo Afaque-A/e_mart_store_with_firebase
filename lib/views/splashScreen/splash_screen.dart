@@ -15,7 +15,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   changeScreen() {
     Future.delayed(const Duration(seconds: 3), () {
-      Get.to(() => LoginScreen());
+      Get.to(() => const LoginScreen());
     });
   }
 
@@ -45,7 +45,7 @@ class _SplashScreenState extends State<SplashScreen> {
             appname.text.fontFamily(semibold).size(22).white.make(),
             5.heightBox,
             appversion.text.white.make(),
-            Spacer(),
+            const Spacer(),
             credits.text.fontFamily(semibold).white.make(),
             30.heightBox
           ],

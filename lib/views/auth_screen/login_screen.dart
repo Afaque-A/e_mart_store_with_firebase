@@ -52,7 +52,7 @@ class LoginScreen extends StatelessWidget {
                             title: signUp,
                             color: redColor,
                             onpress: () {
-                              Get.to(() => SignupScreen());
+                              Get.to(() => const SignupScreen());
                             },
                             textColor: whiteColor)
                         .box

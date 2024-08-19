@@ -7,7 +7,7 @@ Widget ourButton({onpress, color, textColor, String? title}) {
       style: ElevatedButton.styleFrom(
         backgroundColor: color,
         // Set the primary color here
-        padding: EdgeInsets.all(12),
+        padding: const EdgeInsets.all(12),
       ),
       onPressed: onpress,
       child: title!.text.color(textColor).fontFamily(regular).size(17).make());

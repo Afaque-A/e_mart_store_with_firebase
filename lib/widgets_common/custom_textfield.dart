@@ -9,7 +9,7 @@ Widget customTextField({String? title, String? hint, controllar}) {
       TextFormField(
         controller: controllar,
         decoration: InputDecoration(
-            hintStyle: TextStyle(
+            hintStyle: const TextStyle(
               fontFamily: semibold,
               color: textfieldGrey,
             ),
@@ -20,7 +20,7 @@ Widget customTextField({String? title, String? hint, controllar}) {
             border: InputBorder.none,
             focusColor: Colors.black38,
             focusedBorder:
-                OutlineInputBorder(borderSide: BorderSide(color: redColor))),
+                const OutlineInputBorder(borderSide: BorderSide(color: redColor))),
       ),
       5.heightBox
     ],
