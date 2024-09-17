@@ -98,7 +98,13 @@ class _SignupScreenState extends State<SignupScreen> {
                     children: [
                       alreadyHaveAccount.text.make(),
                       and.text.size(15).fontFamily(regular).make(),
-                      login.text.color(redColor).fontFamily(semibold).make()
+                      login.text
+                          .color(redColor)
+                          .fontFamily(semibold)
+                          .make()
+                          .onTap(() {
+                        Get.back();
+                      })
                     ],
                   )
                 ],
