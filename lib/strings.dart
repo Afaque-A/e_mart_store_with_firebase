@@ -17,3 +17,10 @@ const loginWith = " Login with";
 const privacyPolicy = "Privacy Policy";
 const termAndCond = " Terms and Conditions";
 const alreadyHaveAccount = "Already have an account";
+
+// bottomnavbar icons
+
+const home = "Home",
+    category = " Category",
+    cart = "Cart",
+    account = " Profile";
