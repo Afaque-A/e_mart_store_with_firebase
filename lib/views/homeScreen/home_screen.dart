@@ -37,36 +37,89 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             10.heightBox,
-            VxSwiper.builder(
-                aspectRatio: 16 / 9,
-                height: 150,
-                autoPlay: true,
-                // enlargeCenterPage: true,
-                itemCount: sliderlist.length,
-                itemBuilder: (context, index) {
-                  return Container(
-                    child: Image.asset(
-                      sliderlist[index],
-                      fit: BoxFit.fill,
-                    ),
-                  )
-                      .box
-                      .rounded
-                      .clip(Clip.antiAlias)
-                      .margin(EdgeInsets.symmetric(horizontal: 8))
-                      .make();
-                }),
-            10.heightBox,
-            Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: List.generate(
-                    2,
-                    (index) => homeButton(
-                        context.screenHeight * 0.2,
-                        context.screenWidth / 2.5,
-                        () {},
-                        todaydeal,
-                        icTodaysDeal)))
+            Expanded(
+              child: SingleChildScrollView(
+                physics: BouncingScrollPhysics(),
+                child: Column(
+                  children: [
+                    VxSwiper.builder(
+                        aspectRatio: 16 / 9,
+                        height: 150,
+                        autoPlay: true,
+                        itemCount: sliderlist.length,
+                        itemBuilder: (context, index) {
+                          return Container(
+                            child: Image.asset(
+                              sliderlist[index],
+                              fit: BoxFit.fill,
+                            ),
+                          )
+                              .box
+                              .rounded
+                              .clip(Clip.antiAlias)
+                              .margin(const EdgeInsets.symmetric(horizontal: 8))
+                              .make();
+                        }),
+                    10.heightBox,
+                    Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: List.generate(
+                            2,
+                            (index) => homeButton(
+                                height: context.screenHeight * 0.15,
+                                width: context.screenWidth / 2.20,
+                                title: index == 0 ? todaydeal : flashsale,
+                                icon:
+                                    index == 0 ? icTodaysDeal : icFlashDeal))),
+                    15.heightBox,
+                    VxSwiper.builder(
+                        aspectRatio: 16 / 9,
+                        height: 150,
+                        autoPlay: true,
+                        itemCount: secondSliderlist.length,
+                        itemBuilder: (context, index) {
+                          return Container(
+                            child: Image.asset(
+                              secondSliderlist[index],
+                              fit: BoxFit.fill,
+                            ),
+                          )
+                              .box
+                              .rounded
+                              .clip(Clip.antiAlias)
+                              .margin(const EdgeInsets.symmetric(horizontal: 8))
+                              .make();
+                        }),
+                    10.heightBox,
+                    Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: List.generate(
+                            3,
+                            (index) => homeButton(
+                                height: context.screenHeight * 0.15,
+                                width: context.screenWidth / 3.5,
+                                title: index == 0
+                                    ? topcategories
+                                    : index == 1
+                                        ? brands
+                                        : topseller,
+                                icon: index == 0
+                                    ? icTopCategories
+                                    : index == 1
+                                        ? icBrands
+                                        : icTopSeller))),
+                    10.heightBox,
+                    Align(
+                        alignment: Alignment.centerLeft,
+                        child: featuredcategoris.text
+                            .size(20)
+                            .fontFamily(semibold)
+                            .color(redColor)
+                            .make()),
+                  ],
+                ),
+              ),
+            )
           ],
         )));
   }
