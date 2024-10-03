@@ -24,3 +24,11 @@ const home = "Home",
     category = " Category",
     cart = "Cart",
     account = " Profile";
+
+const searchanything = "searchanything....";
+const todaydeal = "Today's Deal",
+    flashsale = "Flash sale",
+    topseller = "Top seller",
+    brands = "Brands",
+    topcategories = "Top categories",
+    featuredcategoris = "Featured categories";
