@@ -39,7 +39,7 @@ class HomeScreen extends StatelessWidget {
             10.heightBox,
             Expanded(
               child: SingleChildScrollView(
-                physics: BouncingScrollPhysics(),
+                physics: const BouncingScrollPhysics(),
                 child: Column(
                   children: [
                     VxSwiper.builder(
